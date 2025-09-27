@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukoluhle Dube - Applied Mathematics & Computational Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .skill-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            animation: fillBar 2s ease-in-out;
+        }
+        @keyframes fillBar {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .typing-animation {
+            border-right: 2px solid #667eea;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #667eea; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gray-800">Sukoluhle Dube</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#experience" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Experience</a>
+                    <a href="#projects" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">About</a>
+                <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600">Experience</a>
+                <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-600">Projects</a>
+                <a href="#skills" class="block py-2 text-gray-600 hover:text-blue-600">Skills</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <div class="mb-8">
+                <div class="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <i class="fas fa-calculator text-6xl text-blue-600"></i>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Sukoluhle Dube</h1>
+            <p class="text-xl md:text-2xl mb-6 typing-animation" id="typing-text">Applied Mathematics & Computational Science</p>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Analytical graduate specializing in mathematical modeling, data systems, and computational solutions for real-world challenges</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">Get In Touch</a>
+                <a href="#projects" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Professional Summary</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Analytical and resilient Applied Mathematics and Computational Science graduate with internship experience in public health data systems, statistical auditing, and mathematical modeling. Skilled in Python, R, simulation, and applied optimization techniques.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Demonstrated ability to develop computational tools and model real-world phenomena, including secure voting systems, epidemic modeling, and financial simulations. Eager to contribute to data-driven solutions in finance, public health, cryptography, or applied research.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Mathematical Modeling</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Data Analysis</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Cryptography</span>
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Public Health</span>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-600">Education</h3>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-semibold">BSc (Hons) Applied Mathematics & Computational Science</h4>
+                        <p class="text-gray-600">Midlands State University, Gweru, Zimbabwe</p>
+                        <p class="text-gray-500 text-sm">Sept 2021 – June 2025</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <h5 class="font-semibold text-sm text-gray-700">Key Areas:</h5>
+                            <p class="text-sm text-gray-600">Mathematical Programming, Machine Learning, Cryptography, Statistical Computing, Mathematical Finance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Experience</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8 card-hover">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-blue-600">Data Quality Support Intern</h3>
+                            <p class="text-lg text-gray-700">OPHID – Organization for Public Health Intervention & Development</p>
+                        </div>
+                        <div class="text-gray-500 mt-2 md:mt-0">
+                            <p>Sep 2023 – Jul 2024</p>
+                            <p>Plumtree, Zimbabwe</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Captured and validated data from healthcare facilities into DHIS2, ensuring accuracy across multiple indicators
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Participated in data quality audits (DQAs) and verification visits to community clinics and registers
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Contributed to performance review meetings for public health programs (DREAMS, TB)
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Enhanced field team productivity through analytical dashboards and reporting tools
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Key Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">🔐</div>
+                    <h3 class="text-xl font-semibold mb-3">Cryptographic Voting Framework</h3>
+                    <p class="text-gray-600 mb-4">Secure voting system using homomorphic encryption and blockchain principles for low-resource settings.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Encryption</span>
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Blockchain</span>
+                    </div>
+                    <a href="https://github.com/Sukoluhle-Dube" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        <i class="fab fa-github mr-2"></i>View on GitHub
+                    </a>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">📈</div>
+                    <h3 class="text-xl font-semibold mb-3">Portfolio Optimization</h3>
+                    <p class="text-gray-600 mb-4">Mathematical models for portfolio optimization using convex optimization and Sharpe ratio analysis.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+                        <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">NumPy</span>
+                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Optimization</span>
+                    </div>
+                    <a href="https://github.com/Sukoluhle-Dube" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        <i class="fab fa-github mr-2"></i>View on GitHub
+                    </a>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <h3 class="text-xl font-semibold mb-3">HouseCost Simulator</h3>
+                    <p class="text-gray-600 mb-4">Predictive modeling tool with Dash web interface for housing cost simulation and analysis.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Dash</span>
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">ML</span>
+                    </div>
+                    <a href="https://github.com/Sukoluhle-Dube" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        <i class="fab fa-github mr-2"></i>View on GitHub
+                    </a>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">🦠</div>
+                    <h3 class="text-xl font-semibold mb-3">Epidemic Modeling</h3>
+                    <p class="text-gray-600 mb-4">HIV spread modeling in Cuba (1986–2000) using SIR-type mathematical models.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Mathematical Modeling</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">SIR Models</span>
+                    </div>
+                    <a href="https://github.com/Sukoluhle-Dube" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        <i class="fab fa-github mr-2"></i>View on GitHub
+                    </a>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6 card-hover">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-3">Computational Finance Toolkit</h3>
+                    <p class="text-gray-600 mb-4">Monte Carlo simulation, option pricing, and time series forecasting tools for financial analysis.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Monte Carlo</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Finance</span>
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Forecasting</span>
+                    </div>
+                    <a href="https://github.com/Sukoluhle-Dube" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 font-semibold">
+                        <i class="fab fa-github mr-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Technical Skills</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">Programming Languages</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Python</span>
+                                <span class="text-sm text-gray-500">Advanced</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar w-11/12"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">R</span>
+                                <span class="text-sm text-gray-500">Advanced</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar w-10/12"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Java</span>
+                                <span class="text-sm text-gray-500">Intermediate</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar w-8/12"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">JavaScript</span>
+                                <span class="text-sm text-gray-500">Intermediate</span>
+                            </div>
+                            <div class="bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar w-7/12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-green-600">Tools & Platforms</h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Power BI</span>
+                        <span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">KNIME</span>
+                        <span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">MySQL</span>
+                        <span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">DHIS2</span>
+                        <span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">AnyLogic</span>
+                        <span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Git/GitHub</span>
+                        <span class="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Linux</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">Specializations</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-chart-line text-purple-500 mr-2"></i>
+                            Mathematical Modeling
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-lock text-purple-500 mr-2"></i>
+                            Cryptography & Security
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-calculator text-purple-500 mr-2"></i>
+                            Numerical Methods
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-database text-purple-500 mr-2"></i>
+                            Statistical Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-brain text-purple-500 mr-2"></i>
+                            Machine Learning
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-heartbeat text-purple-500 mr-2"></i>
+                            Biostatistics
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+            <p class="text-xl mb-12">Ready to collaborate on data-driven solutions? Let's connect!</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Email</h3>
+                    <a href="mailto:umsebenzi2023@gmail.com" class="text-white hover:text-gray-200 transition-colors">umsebenzi2023@gmail.com</a>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Phone</h3>
+                    <a href="tel:+263782882672" class="text-white hover:text-gray-200 transition-colors">+263 78 288 2672</a>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">LinkedIn</h3>
+                    <a href="https://linkedin.com/in/sukoluhle-dube-33772a301" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 transition-colors">Connect</a>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-github text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">GitHub</h3>
+                    <a href="https://github.com/Sukoluhle-Dube" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-200 transition-colors">View Code</a>
+                </div>
+            </div>
+
+            <div class="bg-white bg-opacity-10 rounded-lg p-8 max-w-2xl mx-auto">
+                <h3 class="text-2xl font-semibold mb-6">Send a Message</h3>
+                <form id="contact-form" class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" id="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                        <input type="email" id="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    </div>
+                    <input type="text" id="subject" placeholder="Subject" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                    <textarea id="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 resize-none"></textarea>
+                    <button type="submit" class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-paper-plane mr-2"></i>Send Message
+                    </button>
+                </form>
+                <div id="form-message" class="mt-4 text-center hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Sukoluhle Dube. All rights reserved.</p>
+            <p class="text-gray-400 mt-2">Applied Mathematics & Computational Science Graduate</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:umsebenzi2023@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            
+            // Open email client
+            window.open(mailtoLink, '_blank');
+            
+            // Show success message
+            const messageDiv = document.getElementById('form-message');
+            messageDiv.textContent = 'Email client opened! Your message is ready to send.';
+            messageDiv.className = 'mt-4 text-center text-green-300';
+            messageDiv.classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                messageDiv.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Typing animation for hero text
+        const typingText = document.getElementById('typing-text');
+        const text = 'Applied Mathematics & Computational Science';
+        let index = 0;
+        
+        function typeText() {
+            if (index < text.length) {
+                typingText.textContent = text.slice(0, index + 1);
+                index++;
+                setTimeout(typeText, 100);
+            }
+        }
+        
+        // Start typing animation after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeText, 1000);
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white', 'shadow-lg');
+            } else {
+                nav.classList.remove('bg-white', 'shadow-lg');
+            }
+        });
+
+        // Animate skill bars when they come into view
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        bar.style.animation = 'fillBar 2s ease-in-out';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe skills section
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'985e34c5431d73cd',t:'MTc1OTAwOTcxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
